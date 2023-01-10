@@ -1,5 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
-//4375
+//
 #include <iostream>
 #include <algorithm>
 #include <vector>
