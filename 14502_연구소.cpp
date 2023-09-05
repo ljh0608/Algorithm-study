@@ -40,23 +40,18 @@ int main() {
             graph2[i][j]=graph[i][j];
 
             if(graph[i][j]==2){
-                // cout <<i<<" "<<j<<"\n";
-                                virus[num][0]=i;
+                virus[num][0]=i;
                 virus[num][1]=j;
                 num++;
             }
         }
     }
-
-        // cout <<0%7<<"asdasd\n";
     for(int i=0;i<N*M;i++){
         x1=i/M+1;
         y1=i%M+1;
 
        
         if(!graph2[x1][y1]){
-            //     cout <<x1<<" "<<y1<<"\n";
-            // cout <<graph2[x1][y1]<<"\n";
             for(int j=i+1;j<N*M;j++){
                 x2=j/M+1;
                 y2=j%M+1;
@@ -99,7 +94,7 @@ int main() {
           
         }
     }
-
+`
         cout<<maxnum;
 
     return 0;
