@@ -6,10 +6,20 @@ using namespace std;
 int n,m;
 int street[51][51];
 int chicken[14][2];
-int copyChicken[14][2];
 int house[101][2];
 int visited[14];
 
+    //접근 
+    //num m 으로 nCr numCn 해서 뽑고 (최대 개수 뽑는게 무조건 유리하니 ) 
+    //dfs로 선택된 치킨집 최소 거리계산하고 
+    //선택된 치킨집 중 최소거리를 가지고 있는 치킨집의 거리를 계산 
+ 
+
+    //오답노트
+    //직접 거리 계산해야되는줄알고 조합후 또 dfs를 돌리면서 시간초과
+    // 치킨집 뽑아야하는 개수보다 하나 더 뽑아서 오답
+    // dfs에 고정값 start를 넣어서 오답
+    // num 포함시켜 한개 더 뽑아서 오답
 vector<pair<int,int> >v;
 
    int num=1;
@@ -88,15 +98,6 @@ int main(){
 
    check_in_house(1,1);
 
-
-    //num m 으로 nCr 해서 뽑고 
-    // dfs로 거리계산하고 
-    //최소값 찾고
- 
-    //직접 거리 계산해야되는줄알고 조합후 또 dfs를 돌리면서 시간초과
-    // 치킨집 뽑아야하는 개수보다 하나 더 뽑아서 오답
-    // dfs에 고정값 start를 넣어서 오답
-    // num 포함시켜 한개 더 뽑아서 오답
     cout <<dist;
     return 0;
 }
